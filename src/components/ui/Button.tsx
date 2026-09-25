@@ -6,21 +6,21 @@ import { ButtonShine } from "@/components/ui/ButtonShine";
 
 const buttonVariants = {
   variant: {
-    darkBlue: "bg-[linear-gradient(135deg,#112734fa,#08141dfa)] text-[#dffcff] border border-[#5bffdf24] hover:text-[#04151d] hover:bg-[linear-gradient(135deg,#df7ca5,#df7ca5)]",
+    darkBlue: "bg-white text-[#2c2416] border border-[#e0d0a8] hover:text-[#2c2416] hover:bg-[linear-gradient(135deg,#e6c56a,#c9a24a)]",
     pink: cn(
-      "bg-[linear-gradient(135deg,#a52a58_0%,#7c1d43_35%,#51122b_70%,#c43f73_100%)] text-[#fff7fa]",
-      "border border-[#ffaad247]",
-      "shadow-[0_0_26px_rgb(184_46_102/0.18),0_0_14px_rgb(255_120_180/0.12)] backdrop-blur-[10px]",
+      "bg-[linear-gradient(135deg,#e6c56a_0%,#d4b15a_45%,#c9a24a_100%)] text-[#2c2416]",
+      "border border-[#e0d0a8]",
+      "shadow-[0_0_18px_rgba(230,197,106,0.28)] backdrop-blur-[10px]",
     ),
     darkPink: cn(
-      "bg-[linear-gradient(135deg,#34101efa_0%,#1e0a12fa_45%,#0e0509fc_100%)] text-[#f6e7ec]",
-      "border border-[#ffaad21a]",
-      "shadow-[0_10px_24px_rgb(0_0_0/0.3),0_0_18px_rgb(184_46_102/0.06),inset_0_1px_0_rgb(255_255_255/0.03)] backdrop-blur-[10px]",
+      "bg-white text-[#2c2416]",
+      "border border-[#e8dcc4]",
+      "shadow-[0_10px_24px_rgba(184,146,58,0.10)] backdrop-blur-[10px]",
     ),
     darkBlueGlow: cn(
-      "bg-[linear-gradient(135deg,#112734fa,#08141dfa)] text-[#dffcff] border border-[#5bffdf24]",
-      "hover:text-[#04151d] hover:bg-[linear-gradient(135deg,#df7ca5,#df7ca5)]",
-      "shadow-[0_0_16px_rgb(91_255_223/0.12)]",
+      "bg-white text-[#2c2416] border border-[#e0d0a8]",
+      "hover:text-[#2c2416] hover:bg-[linear-gradient(135deg,#e6c56a,#c9a24a)]",
+      "shadow-[0_0_16px_rgba(230,197,106,0.22)]",
     ),
     red: "text-white bg-[#dc2626] hover:bg-[#b91c1c] border border-[#ef444444]",
     success: "text-white bg-[#198754] hover:bg-[#157347]",

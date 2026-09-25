@@ -23,7 +23,7 @@ export default function Footer() {
       <div className="relative z-10 mx-auto flex w-full max-w-350 flex-col gap-6 px-4 pb-6 pt-8 md:gap-8 md:px-6 md:pb-8 md:pt-12 lg:gap-10 lg:pb-10 lg:pt-15">
         <div
           className={cn(
-            "flex flex-col items-center gap-5 border-b border-[rgba(91_255_223/0.08)] pb-6",
+            "flex flex-col items-center gap-5 border-b border-[#e8dcc4] pb-6",
             "md:gap-7 md:pb-8 lg:flex-row lg:items-center lg:justify-between lg:pb-10",
           )}
         >
@@ -68,8 +68,8 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="flex items-center justify-center gap-5 border-t border-[rgba(91_255_223/0.08)] pt-6 md:pt-8 lg:justify-between lg:pt-9">
-          <p className="max-w-full text-center text-xs font-medium uppercase leading-snug tracking-wide text-[#df7ca5] sm:text-sm lg:text-left">
+        <div className="flex items-center justify-center gap-5 border-t border-[#e8dcc4] pt-6 md:pt-8 lg:justify-between lg:pt-9">
+          <p className="max-w-full text-center text-xs font-medium uppercase leading-snug tracking-wide text-[#8a7344] sm:text-sm lg:text-left">
             © {new Date().getFullYear()} KSKY SOLUTION. ALL RIGHTS RESERVED.
           </p>
         </div>

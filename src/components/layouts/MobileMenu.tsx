@@ -88,9 +88,9 @@ function MobileNav() {
           width: 260,
           maxWidth: "80vw",
           overflowY: "auto",
-          background: "#1a0b12",
-          borderRight: "1px solid rgba(255,170,210,0.15)",
-          boxShadow: isOpen ? "10px 0 30px rgba(0,0,0,0.5)" : "none",
+          background: "#fffcf7",
+          borderRight: "1px solid #e8dcc4",
+          boxShadow: isOpen ? "10px 0 30px rgba(184,146,58,0.12)" : "none",
           transform: isOpen ? "translateX(0)" : "translateX(-100%)",
           transition: "transform 300ms ease-out",
         }}
@@ -102,10 +102,10 @@ function MobileNav() {
             alignItems: "center",
             justifyContent: "space-between",
             padding: "16px 16px 12px",
-            borderBottom: "1px solid rgba(255,170,210,0.12)",
+            borderBottom: "1px solid #e8dcc4",
           }}
         >
-          <span style={{ color: "#df7ca5", fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase" }}>
+          <span style={{ color: "#8a7344", fontSize: 12, fontWeight: 700, letterSpacing: 3, textTransform: "uppercase" }}>
             Menu
           </span>
           <button
@@ -120,7 +120,7 @@ function MobileNav() {
               borderRadius: 8,
               border: "none",
               background: "transparent",
-              color: "rgba(255,255,255,0.7)",
+              color: "#8a7344",
               cursor: "pointer",
             }}
           >
@@ -152,8 +152,8 @@ function MobileNav() {
                   borderRadius: 12,
                   fontSize: 14,
                   fontWeight: 600,
-                  color: active ? "#ffffff" : "#d7d7d7",
-                  background: active ? "rgba(184,46,102,0.2)" : "transparent",
+                  color: active ? "#9a7828" : "#2c2416",
+                  background: active ? "rgba(201,162,74,0.16)" : "transparent",
                   border: "none",
                   cursor: "pointer",
                   textAlign: "left",
@@ -164,7 +164,7 @@ function MobileNav() {
                     width: 16,
                     height: 16,
                     flexShrink: 0,
-                    color: active ? "#df7ca5" : "rgba(223,124,165,0.5)",
+                    color: active ? "#c9a24a" : "#8a7344",
                   }}
                 />
                 <span>{label}</span>
@@ -182,7 +182,7 @@ function MobileNav() {
       <button
         type="button"
         onClick={openMenu}
-        className="flex xl:hidden items-center justify-center size-9 rounded-lg border border-[rgba(255,170,210,0.15)] bg-[rgba(255,255,255,0.06)] text-white transition-colors hover:bg-[rgba(255,255,255,0.12)]"
+        className="flex xl:hidden items-center justify-center size-9 rounded-lg border border-[#e0d0a8] bg-white text-[#2c2416] transition-colors hover:bg-[#f7f1e6]"
         aria-label="메뉴 열기"
       >
         <BsList className="size-5" />
@@ -247,7 +247,7 @@ function MobileUserDropdown() {
   if (loadingUser) {
     return (
       <div className="flex xl:hidden items-center">
-        <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#df7ca5] border-t-transparent" />
+        <div className="h-4 w-4 animate-spin rounded-full border-2 border-[#c9a24a] border-t-transparent" />
       </div>
     );
   }
@@ -264,9 +264,9 @@ function MobileUserDropdown() {
             padding: "0 12px",
             fontSize: 12,
             fontWeight: 700,
-            color: "#fff",
-            background: "rgba(184,46,102,0.6)",
-            border: "1px solid rgba(255,170,210,0.2)",
+            color: "#2c2416",
+            background: "linear-gradient(135deg,#e6c56a,#c9a24a)",
+            border: "1px solid #e0d0a8",
             cursor: "pointer",
           }}
         >
@@ -281,9 +281,9 @@ function MobileUserDropdown() {
             padding: "0 12px",
             fontSize: 12,
             fontWeight: 700,
-            color: "#df7ca5",
-            background: "rgba(255,255,255,0.04)",
-            border: "1px solid rgba(255,170,210,0.15)",
+            color: "#2c2416",
+            background: "#ffffff",
+            border: "1px solid #e0d0a8",
             cursor: "pointer",
           }}
         >
@@ -299,15 +299,15 @@ function MobileUserDropdown() {
         type="button"
         onClick={() => setOpen((v) => !v)}
         className={cn(
-          "flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-white transition-colors",
-          "border border-[rgba(255,170,210,0.15)] bg-[rgba(255,255,255,0.06)]",
-          "hover:bg-[rgba(255,255,255,0.12)]",
-          open && "bg-[rgba(255,255,255,0.12)]",
+          "flex items-center gap-1.5 rounded-lg px-2.5 py-1.5 text-xs font-semibold text-[#2c2416] transition-colors",
+          "border border-[#e0d0a8] bg-white",
+          "hover:bg-[#f7f1e6]",
+          open && "bg-[#f7f1e6]",
         )}
       >
-        <FaRegUserCircle className="size-3.5 text-[#a78bfa] shrink-0" />
+        <FaRegUserCircle className="size-3.5 text-[#8a7344] shrink-0" />
         <span className="max-w-20 truncate">{nickname}</span>
-        <BsChevronDown className={cn("size-3 text-white/50 transition-transform duration-200", open && "rotate-180")} />
+        <BsChevronDown className={cn("size-3 text-[#8a7344] transition-transform duration-200", open && "rotate-180")} />
       </button>
 
       {open && (
@@ -320,56 +320,56 @@ function MobileUserDropdown() {
             width: 220,
             zIndex: 100000,
             borderRadius: 16,
-            border: "1px solid rgba(255,170,210,0.12)",
-            background: "#1a0b12",
-            boxShadow: "0 16px 40px rgba(0,0,0,0.5), 0 0 20px rgba(184,46,102,0.1)",
+            border: "1px solid #e8dcc4",
+            background: "#fffcf7",
+            boxShadow: "0 16px 40px rgba(184,146,58,0.12)",
             overflow: "hidden",
           }}
         >
-          <div style={{ borderBottom: "1px solid rgba(255,170,210,0.08)", padding: "12px 16px" }}>
+          <div style={{ borderBottom: "1px solid #e8dcc4", padding: "12px 16px" }}>
             <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <FaRegUserCircle style={{ width: 20, height: 20, color: "#a78bfa" }} />
-              <span style={{ fontSize: 14, fontWeight: 700, color: "#fff" }}>{nickname} 님</span>
+              <FaRegUserCircle style={{ width: 20, height: 20, color: "#8a7344" }} />
+              <span style={{ fontSize: 14, fontWeight: 700, color: "#2c2416" }}>{nickname} 님</span>
             </div>
           </div>
 
           <div style={{ padding: "12px 16px" }}>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#ccc" }}>
-                <FaWallet style={{ width: 12, height: 12, color: "#ffb000" }} />
+              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#8a7344" }}>
+                <FaWallet style={{ width: 12, height: 12, color: "#c9a24a" }} />
                 <span>머니</span>
               </div>
               <div style={{ display: "flex", alignItems: "center", gap: 6 }}>
-                <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", fontVariantNumeric: "tabular-nums" }}>
+                <span style={{ fontSize: 14, fontWeight: 700, color: "#2c2416", fontVariantNumeric: "tabular-nums" }}>
                   {money.toLocaleString()}
                 </span>
                 <button
                   type="button"
                   onClick={handleRefresh}
-                  style={{ background: "none", border: "none", cursor: "pointer", color: "#ffb000", padding: 0 }}
+                  style={{ background: "none", border: "none", cursor: "pointer", color: "#c9a24a", padding: 0 }}
                 >
                   <FaArrowRotateRight style={{ width: 12, height: 12 }} />
                 </button>
               </div>
             </div>
             <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between" }}>
-              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#ccc" }}>
-                <FaGem style={{ width: 12, height: 12, color: "#38bdf8" }} />
+              <div style={{ display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: "#8a7344" }}>
+                <FaGem style={{ width: 12, height: 12, color: "#8a6e32" }} />
                 <span>포인트</span>
               </div>
-              <span style={{ fontSize: 14, fontWeight: 700, color: "#fff", fontVariantNumeric: "tabular-nums" }}>
+              <span style={{ fontSize: 14, fontWeight: 700, color: "#2c2416", fontVariantNumeric: "tabular-nums" }}>
                 {points.toLocaleString()}
               </span>
             </div>
           </div>
 
-          <div style={{ borderTop: "1px solid rgba(255,170,210,0.08)", padding: "10px 12px" }}>
+          <div style={{ borderTop: "1px solid #e8dcc4", padding: "10px 12px" }}>
             <Button
               variant="transparent"
               type="button"
               onClick={handleLogout}
               fullWidth
-              className="h-9 rounded-xl text-xs font-semibold text-white/80 bg-[rgba(255,255,255,0.05)] hover:bg-[rgba(255,255,255,0.1)]"
+              className="h-9 rounded-xl text-xs font-semibold text-[#2c2416] bg-[#f7f1e6] hover:bg-[#e8dcc4]"
               leftIcon={<FaRightFromBracket className="size-3 shrink-0" />}
             >
               로그아웃

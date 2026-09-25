@@ -24,9 +24,9 @@ const withdrawPagePaddingX = "px-4 sm:px-5 lg:px-[34px]";
 
 const withdrawSectionBoxClassName = cn(
     "relative min-h-0 overflow-hidden rounded-2xl sm:rounded-[28px] lg:rounded-[32px]",
-    "border border-[rgba(255,170,210,0.10)]",
-    "bg-[linear-gradient(180deg,rgba(52,16,30,0.98)_0%,rgba(30,10,18,0.98)_45%,rgba(14,5,9,0.99)_100%)]",
-    "shadow-[0_14px_40px_rgba(0,0,0,0.34),0_0_24px_rgba(184,46,102,0.08)]",
+    "border border-[#e8dcc4]",
+    "bg-white",
+    "shadow-[0_14px_40px_rgba(184,146,58,0.10)]",
 );
 
 const WITHDRAW_SIDEBAR_DEFAULT_NOTICE = [
@@ -36,19 +36,19 @@ const WITHDRAW_SIDEBAR_DEFAULT_NOTICE = [
 ] as const;
 
 const withdrawBoxTitleIconClassName = cn(
-    "flex size-[72px] shrink-0 items-center justify-center rounded-[24px] text-[30px] text-[#04151d]",
-    "bg-[linear-gradient(135deg,#df7ca5,#df7ca5)]",
+    "flex size-[72px] shrink-0 items-center justify-center rounded-[24px] text-[30px] text-[#2c2416]",
+    "bg-[linear-gradient(135deg,#e6c56a,#c9a24a)]",
     "sm:size-20 lg:size-[82px]",
 );
 
 const withdrawInputClassName = cn(
-    "h-14 w-full appearance-none rounded-2xl border border-[rgba(255,170,210,0.10)] outline-none sm:h-[64px] sm:rounded-[18px]",
-    "bg-[linear-gradient(135deg,rgba(68,18,38,0.98)_0%,rgba(40,10,22,0.98)_45%,rgba(18,5,10,0.99)_100%)]",
-    "py-0 pl-12 pr-4 text-sm text-[#fff4f7] placeholder:text-[#df7ca5]/45 sm:pl-[58px] sm:pr-5 sm:text-[15px]",
-    "shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_0_18px_rgba(184,46,102,0.06)]",
+    "h-14 w-full appearance-none rounded-2xl border border-[#e8dcc4] outline-none sm:h-[64px] sm:rounded-[18px]",
+    "bg-[#fffcf7]",
+    "py-0 pl-12 pr-4 text-sm text-[#2c2416] placeholder:text-[#8a7344]/70 sm:pl-[58px] sm:pr-5 sm:text-[15px]",
+    "shadow-none",
     "transition-[border-color,box-shadow,transform] duration-350 ease-out",
-    "focus:border-[rgba(255,170,210,0.22)]",
-    "focus:shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_0_22px_rgba(184,46,102,0.12)]",
+    "focus:border-[#d4b15a]",
+    "focus:shadow-[0_0_0_3px_rgba(201,162,74,0.18)]",
 );
 
 const WITHDRAW_QUICK_AMOUNTS = [
@@ -59,16 +59,16 @@ const WITHDRAW_QUICK_AMOUNTS = [
 ] as const;
 
 const withdrawQuickButtonClassName = cn(
-    "h-11 w-full rounded-2xl px-3 text-xs font-bold text-white sm:h-12 sm:w-auto sm:min-w-24 sm:px-4 sm:text-sm",
-    "hover:text-[#04151d] hover:bg-[linear-gradient(135deg,#df7ca5,#df7ca5)]",
-    "hover:border-[#df7ca5] border-none",
+    "h-11 w-full rounded-2xl px-3 text-xs font-bold text-[#2c2416] sm:h-12 sm:w-auto sm:min-w-24 sm:px-4 sm:text-sm",
+    "hover:text-[#2c2416] hover:bg-[linear-gradient(135deg,#e6c56a,#c9a24a)]",
+    "hover:border-[#c9a24a] border-none",
 );
 
 const withdrawSubmitButtonClassName = cn(
     "relative h-12 w-full gap-2 overflow-hidden rounded-2xl border text-sm font-extrabold sm:h-14 sm:text-base lg:h-15",
     "transition-all duration-300 ease-out",
-    "hover:-translate-y-1 hover:border-[rgba(94,255,217,0.24)]",
-    "hover:shadow-[0_18px_40px_rgba(0,0,0,0.40),0_0_30px_rgba(94,255,217,0.12),0_0_20px_rgba(67,207,255,0.10)]",
+    "hover:-translate-y-1 hover:border-[#d4b15a]",
+    "hover:shadow-[0_18px_40px_rgba(184,146,58,0.18)]",
 );
 
 interface WithdrawRecord {
@@ -185,13 +185,13 @@ const WithdrawPage = () => {
         <AuthGuard>
             <div className="mx-auto w-full min-w-0 max-w-350 px-3 py-8 sm:px-4 sm:py-10 lg:py-14">
                 <header className="mb-6 w-full sm:mb-8">
-                    <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#df7ca5] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
+                    <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#8a7344] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
                         FAST &amp; SAFE WITHDRAW
                     </p>
-                    <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-white sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
+                    <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-[#2c2416] sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
                         출금신청
                     </h1>
-                    <p className="text-sm leading-[1.75] text-[#df7ca5] sm:text-base sm:leading-[1.9]">
+                    <p className="text-sm leading-[1.75] text-[#8a7344] sm:text-base sm:leading-[1.9]">
                         안전하고 신속한 출금 시스템으로 실시간 출금 처리가 가능합니다.
                         출금 전 계좌정보를 다시 한번 확인해주세요.
                     </p>
@@ -216,10 +216,10 @@ const WithdrawPage = () => {
                                 <BsCashCoin aria-hidden />
                             </div>
                             <div className="min-w-0">
-                                <h2 className="text-lg font-extrabold text-white sm:text-xl lg:text-2xl">
+                                <h2 className="text-lg font-extrabold text-[#2c2416] sm:text-xl lg:text-2xl">
                                     출금 정보 입력
                                 </h2>
-                                <p className="mt-0.5 text-xs leading-relaxed text-[#df7ca5] sm:mt-1 sm:text-sm lg:text-[15px]">
+                                <p className="mt-0.5 text-xs leading-relaxed text-[#8a7344] sm:mt-1 sm:text-sm lg:text-[15px]">
                                     출금받으실 정보를 정확하게 입력해주세요.
                                 </p>
                             </div>
@@ -234,13 +234,13 @@ const WithdrawPage = () => {
                             <div className="flex min-w-0 flex-col gap-2">
                                 <label
                                     htmlFor="withdraw-holder"
-                                    className="text-sm font-bold text-white"
+                                    className="text-sm font-bold text-[#2c2416]"
                                 >
                                     예금주명
                                 </label>
                                 <div className="relative">
                                     <BsPersonFill
-                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#df7ca5] sm:left-5 sm:size-4.5"
+                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#8a7344] sm:left-5 sm:size-4.5"
                                         aria-hidden
                                     />
                                     <div
@@ -257,13 +257,13 @@ const WithdrawPage = () => {
                             <div className="flex min-w-0 flex-col gap-2">
                                 <label
                                     htmlFor="withdraw-bank"
-                                    className="text-sm font-bold text-white"
+                                    className="text-sm font-bold text-[#2c2416]"
                                 >
                                     은행명
                                 </label>
                                 <div className="relative">
                                     <BsBank
-                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#df7ca5] sm:left-5 sm:size-4.5"
+                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#8a7344] sm:left-5 sm:size-4.5"
                                         aria-hidden
                                     />
                                     <div
@@ -280,13 +280,13 @@ const WithdrawPage = () => {
                             <div className="flex min-w-0 flex-col gap-2">
                                 <label
                                     htmlFor="withdraw-account"
-                                    className="text-sm font-bold text-white"
+                                    className="text-sm font-bold text-[#2c2416]"
                                 >
                                     출금계좌
                                 </label>
                                 <div className="relative">
                                     <BsCreditCard2FrontFill
-                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#df7ca5] sm:left-5 sm:size-4.5"
+                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#8a7344] sm:left-5 sm:size-4.5"
                                         aria-hidden
                                     />
                                     <div
@@ -303,13 +303,13 @@ const WithdrawPage = () => {
                             <div className="flex min-w-0 flex-col gap-2">
                                 <label
                                     htmlFor="withdraw-amount"
-                                    className="text-sm font-bold text-white"
+                                    className="text-sm font-bold text-[#2c2416]"
                                 >
                                     출금금액
                                 </label>
                                 <div className="relative">
                                     <BsCurrencyDollar
-                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#df7ca5] sm:left-5 sm:size-4.5"
+                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#8a7344] sm:left-5 sm:size-4.5"
                                         aria-hidden
                                     />
                                     <input
@@ -345,13 +345,13 @@ const WithdrawPage = () => {
                             <div className="flex min-w-0 flex-col gap-2 sm:col-span-2">
                                 <label
                                     htmlFor="withdraw-password"
-                                    className="text-sm font-bold text-white"
+                                    className="text-sm font-bold text-[#2c2416]"
                                 >
                                     출금비밀번호
                                 </label>
                                 <div className="relative">
                                     <BsLockFill
-                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#df7ca5] sm:left-5 sm:size-4.5"
+                                        className="pointer-events-none absolute left-4 top-1/2 size-4 -translate-y-1/2 text-[#8a7344] sm:left-5 sm:size-4.5"
                                         aria-hidden
                                     />
                                     <input
@@ -461,11 +461,11 @@ const WithdrawPage = () => {
                             )}
                             aria-labelledby="withdraw-balance-title"
                         >
-                            <div className="mb-5 flex items-center gap-2.5 text-lg font-extrabold text-white sm:mb-7 sm:gap-3 sm:text-xl">
-                                <BsFillWalletFill className="size-5 shrink-0 text-[#df7ca5] sm:size-6" />
+                            <div className="mb-5 flex items-center gap-2.5 text-lg font-extrabold text-[#2c2416] sm:mb-7 sm:gap-3 sm:text-xl">
+                                <BsFillWalletFill className="size-5 shrink-0 text-[#8a7344] sm:size-6" />
                                 <h2
                                     id="withdraw-balance-title"
-                                    className="text-lg font-extrabold text-white sm:text-xl"
+                                    className="text-lg font-extrabold text-[#2c2416] sm:text-xl"
                                 >
                                     보유 금액
                                 </h2>
@@ -475,10 +475,10 @@ const WithdrawPage = () => {
                                     "rounded-2xl bg-[linear-gradient(135deg,rgba(17,39,52,.96),rgba(8,20,29,.96))] p-4 text-center sm:rounded-3xl sm:p-7",
                                 )}
                             >
-                                <div className="mb-3 text-sm font-extrabold text-[#df7ca5] sm:mb-4 sm:text-base">
+                                <div className="mb-3 text-sm font-extrabold text-[#8a7344] sm:mb-4 sm:text-base">
                                     현재 출금 가능 금액
                                 </div>
-                                <div className="text-2xl font-extrabold tracking-[-0.5px] text-white sm:text-3xl sm:tracking-[-1px] lg:text-4xl">
+                                <div className="text-2xl font-extrabold tracking-[-0.5px] text-[#2c2416] sm:text-3xl sm:tracking-[-1px] lg:text-4xl">
                                     {formatNumber(availableBalance)}
                                 </div>
                             </div>
@@ -491,23 +491,23 @@ const WithdrawPage = () => {
                             )}
                             aria-labelledby="withdraw-notice-title"
                         >
-                            <div className="mb-5 flex items-center gap-2.5 text-lg font-extrabold text-white sm:mb-7 sm:gap-3 sm:text-xl">
-                                <BsExclamationTriangleFill className="size-5 shrink-0 text-[#df7ca5] sm:size-6" />
+                            <div className="mb-5 flex items-center gap-2.5 text-lg font-extrabold text-[#2c2416] sm:mb-7 sm:gap-3 sm:text-xl">
+                                <BsExclamationTriangleFill className="size-5 shrink-0 text-[#8a7344] sm:size-6" />
                                 <h2
                                     id="withdraw-notice-title"
-                                    className="text-lg font-extrabold text-white sm:text-xl"
+                                    className="text-lg font-extrabold text-[#2c2416] sm:text-xl"
                                 >
                                     출금 안내사항
                                 </h2>
                             </div>
-                            <ul className="space-y-3 text-xs leading-[1.7] text-white/95 sm:space-y-4 sm:text-sm sm:leading-[1.75] lg:text-[15px] lg:leading-[1.8]">
+                            <ul className="space-y-3 text-xs leading-[1.7] text-[#2c2416]/90 sm:space-y-4 sm:text-sm sm:leading-[1.75] lg:text-[15px] lg:leading-[1.8]">
                                 {sidebarNoticeLines.map((line, idx) => (
                                     <li
                                         key={`${idx}-${line}`}
                                         className="flex items-start gap-2.5 sm:items-center sm:gap-3"
                                     >
                                         <span
-                                            className="size-2 shrink-0 rounded-full bg-[#df7ca5]"
+                                            className="size-2 shrink-0 rounded-full bg-[#c9a24a]"
                                             aria-hidden
                                         />
                                         <span>{line}</span>

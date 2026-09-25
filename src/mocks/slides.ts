@@ -6,24 +6,24 @@ import type {
 
 export const CASINO_SLIDES: CarouselSlide[] = [
   {
-    bgImage: "/images/banner/visu01.webp",
-    entityImage: "/images/banner/vsa01.webp",
+    bgImage: "/images/banner/banner1.png",
+    entityImage: "/images/banner/vsa1.png",
     eyebrow: "PREMIUM LIVE PLATFORM",
     title: "NEXT LEVEL\nLIVE CASINO",
     description:
       "최고의 카지노 플랫폼에서 실시간 라이브 카지노와 슬롯게임을 경험해보세요.",
   },
   {
-    bgImage: "/images/banner/visu02.webp",
-    entityImage: "/images/banner/vsa02.webp",
+    bgImage: "/images/banner/banner2.png",
+    entityImage: "/images/banner/vsa2.png",
     eyebrow: "REAL TIME CASINO",
     title: "LIVE DEALER\nGAMING SYSTEM",
     description:
       "빠르고 안정적인 시스템과 몰입감 높은 라이브 환경을 제공합니다.",
   },
   {
-    bgImage: "/images/banner/visu03.webp",
-    entityImage: "/images/banner/vsa03.webp",
+    bgImage: "/images/banner/banner3.png",
+    entityImage: "/images/banner/vsa3.png",
     eyebrow: "PREMIUM SLOT SYSTEM",
     title: "ULTIMATE\nSLOT EXPERIENCE",
     description:

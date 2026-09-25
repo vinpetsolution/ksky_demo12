@@ -34,10 +34,10 @@ const getVisiblePages = (currentPage: number, totalPages: number): number[] => {
 const paginationHoverEffectClass = cn(
   'relative overflow-hidden',
   "before:pointer-events-none before:absolute before:top-[-40%] before:left-[-120%] before:h-[220%] before:w-[70%] before:rotate-[25deg] before:content-['']",
-  'before:bg-[linear-gradient(90deg,transparent,rgb(255_255_255/0.05),rgb(255_120_180/0.18),rgb(255_255_255/0.05),transparent)]',
+  'before:bg-[linear-gradient(90deg,transparent,rgb(255_255_255/0.35),rgb(230_197_106/0.45),rgb(255_255_255/0.35),transparent)]',
   'before:transition-[left] before:duration-700 before:ease-out',
   'hover:before:left-[160%] transition-all duration-[350ms] ease',
-  'hover:shadow-[0_16px_30px_rgb(0_0_0/0.38),0_0_22px_rgb(184_46_102/0.10)]',
+  'hover:shadow-[0_16px_30px_rgba(184,146,58,0.16)]',
   'disabled:hover:before:left-[-120%] disabled:hover:shadow-none',
 );
 

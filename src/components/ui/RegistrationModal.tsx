@@ -203,7 +203,7 @@ export function RegistrationModal({
       <div className="relative mb-4 shrink-0">
         <h2
           id="registration-modal-title"
-          className="text-4xl font-extrabold text-white"
+          className="text-4xl font-extrabold text-[#2c2416]"
         >
           회원가입
         </h2>

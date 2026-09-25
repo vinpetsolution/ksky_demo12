@@ -20,7 +20,7 @@ const SHINE_DURATION = 4.5;
 const SHINE_X = ["-171%", "229%"] as const;
 
 const SHINE_GRADIENT =
-    "linear-gradient(90deg, transparent, rgb(255 255 255 / 0.05), rgb(120 255 235 / 0.28), rgb(255 255 255 / 0.05), transparent)";
+    "linear-gradient(90deg, transparent, rgb(255 252 247 / 0.2), rgb(230 197 106 / 0.45), rgb(255 252 247 / 0.2), transparent)";
 
 const PLAY_CIRCLE_PX = 86;
 const PLAY_SHINE_GRADIENT =
@@ -81,11 +81,11 @@ const CardItem = ({ title, logoImage, bgImage, link, className }: CardItemProps)
             href={link || '#'}
             requireAuth
             className={cn('relative block overflow-hidden rounded-3xl',
-                "bg-[linear-gradient(180deg, rgba(10, 28, 40, .98), rgba(6, 18, 28, .98))] isolate",
-                "border border-[#ffaad21a] backdrop-blur-[10px]",
-                "shadow-[0_14px_34px_rgba(0,0,0,0.34),0_0_20px_rgba(184,46,102,0.06),inset_0_1px_0_rgba(255,255,255,0.03)]",
-                "hover:scale-[1.04] hover:shadow-[0_0_26px_rgba(184,46,102,0.18),0_0_42px_rgba(255,120,180,0.14),0_24px_60px_rgba(0,0,0,0.48)]",
-                "group hover:border-[#ffb4d238] hover:-translate-y-3 transition-all duration-300",
+                "bg-white isolate",
+                "border border-[#e8dcc4] backdrop-blur-[10px]",
+                "shadow-[0_14px_34px_rgba(184,146,58,0.10)]",
+                "hover:scale-[1.04] hover:shadow-[0_18px_40px_rgba(184,146,58,0.18)]",
+                "group hover:border-[#d4b15a] hover:-translate-y-3 transition-all duration-300",
                 className)}
         >
             {/* Shine */}
@@ -106,7 +106,7 @@ const CardItem = ({ title, logoImage, bgImage, link, className }: CardItemProps)
                 <div
                     className={cn(
                         "absolute inset-0 z-10 flex flex-col items-center justify-center gap-4",
-                        "bg-[linear-gradient(180deg,rgb(5_18_28/0.25),rgb(5_18_28/0.82))]",
+                        "bg-[linear-gradient(180deg,rgb(251_246_238/0.15),rgb(251_246_238/0.88))]",
                         "backdrop-blur-xs",
                         "invisible opacity-0",
                         "transition-all duration-300",
@@ -116,12 +116,12 @@ const CardItem = ({ title, logoImage, bgImage, link, className }: CardItemProps)
                     <div
                         className={cn(
                             "relative flex size-21.5 scale-70 items-center justify-center overflow-hidden rounded-full",
-                            "border border-[rgb(255_170_210/0.16)] text-[40px] text-[#fff6f8]",
-                            "bg-[linear-gradient(135deg,#8f214b_0%,#631733_38%,#320b18_72%,#c03a6f_100%)]",
-                            "shadow-[0_0_24px_rgb(184_46_102/0.20),0_0_44px_rgb(255_120_180/0.10),inset_0_1px_0_rgb(255_255_255/0.08)]",
+                            "border border-[#e0d0a8] text-[40px] text-[#2c2416]",
+                            "bg-[linear-gradient(135deg,#e6c56a_0%,#d4b15a_45%,#c9a24a_100%)]",
+                            "shadow-[0_0_18px_rgba(230,197,106,0.35)]",
                             "transition-all duration-300",
-                            "group-hover:scale-100 group-hover:border-[rgb(255_170_210/0.28)]",
-                            "group-hover:shadow-[0_0_28px_rgb(184_46_102/0.28),0_0_48px_rgb(255_120_180/0.16),inset_0_1px_0_rgb(255_255_255/0.12)]",
+                            "group-hover:scale-100 group-hover:border-[#d4b15a]",
+                            "group-hover:shadow-[0_0_24px_rgba(230,197,106,0.45)]",
                         )}
                         aria-hidden
                     >
@@ -131,8 +131,8 @@ const CardItem = ({ title, logoImage, bgImage, link, className }: CardItemProps)
 
                     <span
                         className={cn(
-                            "relative translate-y-2.5 text-[15px] font-extrabold uppercase tracking-[2px] text-[#ffe7f0] opacity-0",
-                            "[text-shadow:0_0_12px_rgb(255_120_180/0.14)]",
+                            "relative translate-y-2.5 text-[15px] font-extrabold uppercase tracking-[2px] text-[#2c2416] opacity-0",
+                            "[text-shadow:0_0_12px_rgba(230,197,106,0.35)]",
                             "transition-all duration-300",
                             "group-hover:translate-y-0 group-hover:opacity-100",
                         )}
@@ -144,10 +144,10 @@ const CardItem = ({ title, logoImage, bgImage, link, className }: CardItemProps)
 
             {/* Logo */}
             <div
-                className={cn(" h-16 md:h-20 xl:h-28 flex items-center border-t border-[rgba(255_170_210/.08)]",
-                    "bg-[linear-gradient(135deg,rgba(44,14,24,.98)_0%,rgba(28,10,18,.98)_45%,rgba(14,5,9,.99)_100%)]",
-                    "text-[#fff6f8] gap-4 px-3 md:px-4 xl:px-5",
-                    "shadow-[inset_0_1px_0_rgba(255,255,255,.03)]",
+                className={cn(" h-16 md:h-20 xl:h-28 flex items-center border-t border-[#e8dcc4]",
+                    "bg-[#fffcf7]",
+                    "text-[#2c2416] gap-4 px-3 md:px-4 xl:px-5",
+                    "shadow-none",
                 )}
             >
                 <div className='relative size-8 md:size-10 shrink-0'>

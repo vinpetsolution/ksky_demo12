@@ -9,17 +9,17 @@ import { Button } from "./Button";
 
 const modalPanelClassName = cn(
     "relative z-[2] flex w-full min-w-[300px] max-w-[95vw] max-h-[90vh] flex-col overflow-hidden rounded-[36px] p-8 sm:p-10 lg:p-[50px]",
-    "border border-[rgba(255,180,210,0.14)]",
-    "bg-[radial-gradient(circle_at_top_right,rgba(255,120,160,0.14),transparent_30%),linear-gradient(180deg,rgba(82,16,38,0.98),rgba(34,6,16,0.98))]",
-    "shadow-[0_20px_60px_rgba(0,0,0,0.50),0_0_40px_rgba(120,20,50,0.12),inset_0_1px_0_rgba(255,255,255,0.04)]",
+    "border border-[#e8dcc4]",
+    "bg-[#fffcf7]",
+    "shadow-[0_20px_60px_rgba(184,146,58,0.16)]",
 );
 
 const modalCloseButtonClassName = cn(
-    "absolute top-5 right-5 z-[5] hover:text-[#04151d] flex size-11 shrink-0 items-center justify-center rounded-[14px] p-0",
-    "border border-[rgba(91,255,223,0.10)] text-[#dffcff]",
-    "bg-[linear-gradient(135deg,rgba(17,39,52,0.96),rgba(8,20,29,0.96))]",
+    "absolute top-5 right-5 z-[5] hover:text-[#2c2416] flex size-11 shrink-0 items-center justify-center rounded-[14px] p-0",
+    "border border-[#e0d0a8] text-[#2c2416]",
+    "bg-white",
     "transition-all duration-350 ease-out",
-    "hover:border-[rgba(91,255,223,0.22)] hover:bg-[linear-gradient(135deg,#df7ca5,#df7ca5)]",
+    "hover:border-[#d4b15a] hover:bg-[linear-gradient(135deg,#e6c56a,#c9a24a)]",
     "disabled:pointer-events-none disabled:opacity-50",
 );
 
@@ -116,7 +116,7 @@ const Modal: React.FC<ModalProps> = ({
                 {footer ? (
                     <div
                         className={cn(
-                            "mt-4 flex shrink-0 items-center justify-end gap-3 border-t border-[rgba(255,180,210,0.14)] pt-4",
+                            "mt-4 flex shrink-0 items-center justify-end gap-3 border-t border-[#e8dcc4] pt-4",
                             positionFooter === "start" && "justify-start",
                             positionFooter === "center" && "justify-center",
                         )}

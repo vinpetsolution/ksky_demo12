@@ -36,7 +36,7 @@ export function LiveMainTitle({ characters, className }: LiveMainTitleProps) {
   return (
     <h2
       className={cn(
-        "relative mb-4 flex flex-wrap items-baseline overflow-hidden text-[32px] md:text-[40px] lg:text-[44px] xl:text-[48px] font-black tracking-[-2px] text-white",
+        "relative mb-4 flex flex-wrap items-baseline overflow-hidden text-[32px] md:text-[40px] lg:text-[44px] xl:text-[48px] font-black tracking-[-2px] text-[#2c2416]",
         className,
       )}
     >

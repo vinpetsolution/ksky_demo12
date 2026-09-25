@@ -40,29 +40,29 @@ const TITLE_OVERLAY = "/images/title_effect_overlay.png";
 const tableBaseClassName = "bs-table";
 
 const theadClassNameBase =
-  "bg-[linear-gradient(90deg,#1d1d1d,#101010)]";
+  "bg-[#f7f1e6]";
 
 const thClassNameBase = cn(
-  "h-[50px] border-0 bg-transparent px-1 py-0 text-center text-xs font-medium text-white",
+  "h-[50px] border-0 bg-transparent px-1 py-0 text-center text-xs font-medium text-[#2c2416]",
   "whitespace-nowrap last:border-r-0",
 );
 
 const trClassNameBase = "bg-transparent transition-colors duration-300";
 
 const tdClassNameBase = cn(
-  "h-[50px] border-b border-[rgba(0,0,0,0.25)] border-t border-[rgba(255,255,255,0.05)]",
-  "bg-[rgba(255,255,255,0.08)] p-px text-center text-xs text-white",
+  "h-[50px] border-b border-[#e8dcc4] border-t border-[#e8dcc4]",
+  "bg-white p-px text-center text-xs text-[#2c2416]",
   "transition-[background-color] duration-300",
 );
 
 const emptyCellClassNameBase = cn(
   "h-[50px]",
-  "bg-[rgba(255,255,255,0.08)] p-px py-8 text-center text-xs text-white/80",
+  "bg-white p-px py-8 text-center text-xs text-[#2c2416]/80",
 );
 
-const trHoverClassName = "hover:[&_td]:bg-[rgba(255,255,255,0.05)]";
+const trHoverClassName = "hover:[&_td]:bg-[#fbf6ee]";
 
-const trSelectedClassName = "[&_td]:bg-[rgba(255,255,255,0.12)]";
+const trSelectedClassName = "[&_td]:bg-[#f7f1e6]";
 
 const Table = <T,>({
   columns,
@@ -138,12 +138,12 @@ const Table = <T,>({
                 {col.orderable &&
                   (orderBy === col.key ? (
                     orderDirection === "asc" ? (
-                      <LuArrowUpDown className="h-4 w-4.5 text-white/70 transition-transform duration-200" />
+                      <LuArrowUpDown className="h-4 w-4.5 text-[#2c2416]/70 transition-transform duration-200" />
                     ) : (
-                      <LuArrowDownUp className="h-4 w-4.5 text-white/70 transition-transform duration-200" />
+                      <LuArrowDownUp className="h-4 w-4.5 text-[#2c2416]/70 transition-transform duration-200" />
                     )
                   ) : (
-                    <LuArrowDownUp className="h-4 w-4.5 text-white/50" />
+                    <LuArrowDownUp className="h-4 w-4.5 text-[#8a7344]" />
                   ))}
               </span>
             </th>
@@ -218,7 +218,7 @@ const Table = <T,>({
     <div className={cn("min-w-0", title != null && "overflow-hidden")}>
       {title != null && (
         <div
-          className="relative z-10 mb-px flex h-15.5 shrink-0 items-center bg-[#13070c]"
+          className="relative z-10 mb-px flex h-15.5 shrink-0 items-center bg-[#f7f1e6]"
           style={{
             backgroundImage: `url(${TITLE_OVERLAY})`,
             backgroundPosition: "left",

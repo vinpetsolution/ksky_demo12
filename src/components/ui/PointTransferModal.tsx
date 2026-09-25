@@ -15,13 +15,13 @@ interface PointTransferModalProps {
 }
 
 const transferRowClassName = cn(
-  "grid min-h-[50px] grid-cols-[minmax(72px,1fr)_minmax(0,1.1fr)_minmax(88px,1.2fr)] items-stretch p-px text-center text-[10px] text-white sm:grid-cols-3 sm:text-xs",
-  "border-t border-b border-t-[rgba(255,255,255,0.05)] border-b-[rgba(0,0,0,0.25)]",
-  "rounded-b-lg bg-[rgba(255,255,255,0.08)] transition-[background-color] duration-300 hover:bg-[rgba(255,255,255,0.05)] sm:rounded-b-xl",
+  "grid min-h-[50px] grid-cols-[minmax(72px,1fr)_minmax(0,1.1fr)_minmax(88px,1.2fr)] items-stretch p-px text-center text-[10px] text-[#2c2416] sm:grid-cols-3 sm:text-xs",
+  "border-t border-b border-t-[#e8dcc4] border-b-[#e8dcc4]",
+  "rounded-b-lg bg-white transition-[background-color] duration-300 hover:bg-[#fbf6ee] sm:rounded-b-xl",
 );
 
 const transferRowCellClassName = cn(
-  "flex min-w-0 items-center justify-center border-r border-[rgba(255,255,255,0.08)]",
+  "flex min-w-0 items-center justify-center border-r border-[#e8dcc4]",
   "px-0.5 last:border-r-0 sm:px-1",
 );
 
@@ -31,18 +31,18 @@ const transferSubmitButtonClassName = cn(
   "[text-shadow:0_1px_0_#000]",
 );
 
-const transferTableTheadClassName = "bg-[#d2a03a]!";
+const transferTableTheadClassName = "bg-[#d4b15a]!";
 
 const transferTableHeaderClassName = cn(
-  "h-11 bg-[#d2a03a] text-center text-[11px] text-[#fff] sm:h-[50px] sm:text-xs",
+  "h-11 bg-[#d4b15a] text-center text-[11px] text-[#2c2416] sm:h-[50px] sm:text-xs",
 );
 
 const transferTableCellClassName = cn(
-  "h-11 bg-transparent! text-center text-[11px] text-[#fff] sm:h-[50px] sm:text-xs",
-  "border-t border-b border-t-[rgba(255,255,255,0.05)] border-b-[rgba(0,0,0,0.25)]",
+  "h-11 bg-transparent! text-center text-[11px] text-[#2c2416] sm:h-[50px] sm:text-xs",
+  "border-t border-b border-t-[#e8dcc4] border-b-[#e8dcc4]",
 );
 
-const transferTableEmptyClassName = "bg-transparent! text-xs text-white/70";
+const transferTableEmptyClassName = "bg-transparent! text-xs text-[#2c2416]/70";
 
 const transferTableClassName = cn(
   "min-w-[300px] bg-transparent sm:min-w-0",
@@ -130,10 +130,10 @@ export function PointTransferModal({ open, onClose }: PointTransferModalProps) {
       )}
       contentClassName="flex min-h-0 flex-1 flex-col"
     >
-      <h2 className="mb-4 shrink-0 text-left text-xl font-extrabold text-white sm:mb-6 sm:text-2xl md:mb-8 lg:text-4xl">
+      <h2 className="mb-4 shrink-0 text-left text-xl font-extrabold text-[#2c2416] sm:mb-6 sm:text-2xl md:mb-8 lg:text-4xl">
         전환
       </h2>
-      <div className="flex min-h-0 w-full flex-1 flex-col bg-black/30 p-3 sm:p-4 md:p-6">
+      <div className="flex min-h-0 w-full flex-1 flex-col rounded-2xl bg-[#f7f1e6] p-3 sm:p-4 md:p-6">
         <div className={cn(transferRowClassName, "shrink-0")}>
           <div className={transferRowCellClassName}>
             <span className="truncate px-0.5 sm:px-1">보유포인트</span>
@@ -149,7 +149,7 @@ export function PointTransferModal({ open, onClose }: PointTransferModalProps) {
               title={`보유: ${formatNumber(availablePoint)} P`}
               aria-label={`전환 포인트, 보유 ${formatNumber(availablePoint)} P`}
               placeholder="0"
-              className="w-full min-w-0 bg-transparent text-center text-[11px] text-white outline-none placeholder:text-white/40 sm:text-xs"
+              className="w-full min-w-0 bg-transparent text-center text-[11px] text-[#2c2416] outline-none placeholder:text-[#8a7344]/70 sm:text-xs"
             />
           </div>
           <div className={cn(transferRowCellClassName, "px-1 sm:px-2")}>

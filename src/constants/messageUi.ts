@@ -2,20 +2,20 @@ import type { MessageThreadSummary } from "@/types";
 import { cn } from "@/utils/classNames";
 
 export const messageWineGradientClassName = cn(
-  "bg-[radial-gradient(circle_at_top_right,rgba(255,130,170,0.10),transparent_35%),linear-gradient(135deg,rgba(78,16,36,0.98),rgba(28,6,14,0.98))]",
+  "bg-[linear-gradient(180deg,#fffcf7_0%,#ffffff_100%)]",
 );
 
 export const messageListBoxClassName = cn(
   "overflow-hidden rounded-2xl sm:rounded-[28px] lg:rounded-[32px]",
-  "border border-[rgba(255,170,200,0.12)]",
-  "shadow-[0_14px_40px_rgba(0,0,0,0.30)]",
+  "border border-[#e8dcc4]",
+  "shadow-[0_14px_40px_rgba(184,146,58,0.10)]",
   messageWineGradientClassName,
 );
 
 export const messageTableScrollMinWidthClassName = "min-w-[520px] sm:min-w-0";
 
 export const messageTableHeaderClassName =
-  "h-14 text-sm font-extrabold text-[#df7ca5] sm:h-[78px] sm:text-base";
+  "h-14 text-sm font-extrabold text-[#8a7344] sm:h-[78px] sm:text-base";
 
 export const messageTableCellClassName =
   "text-sm h-12 sm:h-[50px] px-1 sm:px-2";
@@ -25,10 +25,10 @@ export const messageActionsRowClassName =
 
 export const messageActionButtonClassName = cn(
   "inline-flex h-12 min-w-0 flex-1 items-center justify-center gap-2 rounded-[18px]",
-  "border border-[rgba(255,170,200,0.12)] text-sm font-bold text-[#dffcff]",
+  "border border-[#e0d0a8] text-sm font-bold text-[#2c2416]",
   "transition-all duration-350 ease-out sm:h-14 sm:flex-none sm:min-w-[160px] sm:gap-2.5",
-  messageWineGradientClassName,
-  "hover:bg-[linear-gradient(135deg,#df7ca5,#df7ca5)] hover:text-[#04151d]",
+  "bg-white",
+  "hover:bg-[linear-gradient(135deg,#e6c56a,#c9a24a)] hover:text-[#2c2416]",
   "disabled:pointer-events-none disabled:opacity-45",
 );
 
@@ -36,8 +36,8 @@ export const messageTableHeadClassName = messageWineGradientClassName;
 
 export const messageUnreadRowClassName = cn(
   messageWineGradientClassName,
-  "[&_td]:border-[rgba(255,170,200,0.12)]",
-  "[&_td]:bg-[radial-gradient(circle_at_top_right,rgba(255,130,170,0.10),transparent_35%),linear-gradient(135deg,rgba(78,16,36,0.98),rgba(28,6,14,0.98))]",
+  "[&_td]:border-[#e8dcc4]",
+  "[&_td]:bg-[#fffcf7]",
 );
 
 export function sortThreadsByDate(

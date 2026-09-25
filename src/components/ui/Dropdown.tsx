@@ -114,7 +114,7 @@ export function Dropdown({
                 index === 0 && "rounded-t-lg",
                 index === options.length - 1 && "rounded-b-lg",
                 opt.value === value
-                  ? "bg-[rgba(223,124,165,0.14)] font-semibold text-black"
+                  ? "bg-[rgba(201,162,74,0.18)] font-semibold text-[#2c2416]"
                   : "text-black hover:bg-black/10",
               )}
             >

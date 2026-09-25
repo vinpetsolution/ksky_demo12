@@ -9,9 +9,9 @@ import { cn } from "@/utils/classNames";
 import { toast } from "sonner";
 
 const whiteFieldClassName = cn(
-  "w-full rounded-xl border-0 bg-white px-4 py-3 text-sm text-[#04151d]",
-  "placeholder:text-sm placeholder:text-gray-400",
-  "focus:outline-none focus:ring-2 focus:ring-[#df7ca5]/35",
+  "w-full rounded-xl border-0 bg-white px-4 py-3 text-sm text-[#2c2416]",
+  "placeholder:text-sm placeholder:text-[#8a7344]/70",
+  "focus:outline-none focus:ring-2 focus:ring-[#c9a24a]/40",
 );
 
 const writeActionButtonClassName =
@@ -56,13 +56,13 @@ export default function InquiriesWritePage() {
     <AuthGuard>
       <div className="mx-auto w-full min-w-0 max-w-350 px-3 py-8 sm:px-4 sm:py-10 lg:py-14">
         <header className="mb-8 w-full sm:mb-10">
-          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#df7ca5] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
+          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#8a7344] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
             24 HOURS SUPPORT
           </p>
-          <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-white sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
+          <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-[#2c2416] sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
             고객센터
           </h1>
-          <p className="text-sm leading-[1.75] text-[#df7ca5]">
+          <p className="text-sm leading-[1.75] text-[#8a7344]">
             와인카지노 고객센터는 24시간 빠르고 안전한 상담 서비스를 제공합니다.
           </p>
         </header>

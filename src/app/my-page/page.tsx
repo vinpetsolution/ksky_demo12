@@ -9,36 +9,36 @@ import { BsPersonFill, BsBank2, BsShieldLockFill, BsPencilSquare } from "react-i
 
 const sectionBox = cn(
   "relative min-h-0 overflow-hidden rounded-2xl sm:rounded-[28px] lg:rounded-[32px]",
-  "border border-[rgba(255,170,210,0.10)]",
-  "bg-[linear-gradient(180deg,rgba(52,16,30,0.98)_0%,rgba(30,10,18,0.98)_45%,rgba(14,5,9,0.99)_100%)]",
-  "shadow-[0_14px_40px_rgba(0,0,0,0.34),0_0_24px_rgba(184,46,102,0.08)]",
+  "border border-[#e8dcc4]",
+  "bg-white",
+  "shadow-[0_14px_40px_rgba(184,146,58,0.10)]",
 );
 
 const inputClass = cn(
-  "h-14 w-full appearance-none rounded-2xl border border-[rgba(255,170,210,0.10)] outline-none sm:h-[64px] sm:rounded-[18px]",
-  "bg-[linear-gradient(135deg,rgba(68,18,38,0.98)_0%,rgba(40,10,22,0.98)_45%,rgba(18,5,10,0.99)_100%)]",
-  "py-0 px-4 text-sm text-[#fff4f7] placeholder:text-[#df7ca5]/45 sm:px-5 sm:text-[15px]",
-  "shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_0_18px_rgba(184,46,102,0.06)]",
+  "h-14 w-full appearance-none rounded-2xl border border-[#e8dcc4] outline-none sm:h-[64px] sm:rounded-[18px]",
+  "bg-[#fffcf7]",
+  "py-0 px-4 text-sm text-[#2c2416] placeholder:text-[#8a7344]/70 sm:px-5 sm:text-[15px]",
+  "shadow-none",
   "transition-[border-color,box-shadow] duration-350 ease-out",
-  "focus:border-[rgba(255,170,210,0.22)]",
-  "focus:shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_0_22px_rgba(184,46,102,0.12)]",
+  "focus:border-[#d4b15a]",
+  "focus:shadow-[0_0_0_3px_rgba(201,162,74,0.18)]",
 );
 
 const readonlyClass = cn(inputClass, "cursor-not-allowed opacity-60");
 
 const iconBox = cn(
-  "relative flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl text-2xl text-white",
+  "relative flex size-14 shrink-0 items-center justify-center overflow-hidden rounded-2xl text-2xl text-[#2c2416]",
   "sm:size-16 sm:rounded-[24px] sm:text-[28px]",
-  "border border-[rgba(255,170,210,0.12)]",
-  "bg-[linear-gradient(145deg,rgba(72,20,40,0.98)_0%,rgba(40,10,22,0.98)_45%,rgba(18,5,10,0.99)_100%)]",
-  "shadow-[0_14px_34px_rgba(0,0,0,0.36),0_0_24px_rgba(184,46,102,0.10)]",
+  "border border-[#e8dcc4]",
+  "bg-[linear-gradient(145deg,#e6c56a_0%,#d4b15a_55%,#c9a24a_100%)]",
+  "shadow-[0_14px_34px_rgba(184,146,58,0.12)]",
 );
 
 const submitBtn = cn(
   "relative h-12 w-full gap-2 overflow-hidden rounded-2xl border text-sm font-extrabold sm:h-14 sm:text-base",
-  "border-[#df7ca5] bg-[linear-gradient(135deg,#b82e66,#df7ca5)]",
-  "text-white shadow-[0_4px_20px_rgba(184,46,102,0.3)]",
-  "transition-all duration-300 hover:shadow-[0_4px_28px_rgba(184,46,102,0.5)] hover:brightness-110",
+  "border-[#c9a24a] bg-[linear-gradient(135deg,#e6c56a,#c9a24a)]",
+  "text-[#2c2416] shadow-[0_4px_20px_rgba(184,146,58,0.22)]",
+  "transition-all duration-300 hover:shadow-[0_4px_28px_rgba(184,146,58,0.32)] hover:brightness-110",
   "disabled:opacity-50 disabled:cursor-not-allowed",
 );
 
@@ -105,7 +105,7 @@ export default function MyPage() {
   return (
     <AuthGuard>
       <div className="mx-auto max-w-3xl px-4 py-8 sm:px-5 lg:px-8.5">
-        <h1 className="mb-6 text-2xl font-bold text-white sm:text-3xl">마이페이지</h1>
+        <h1 className="mb-6 text-2xl font-bold text-[#2c2416] sm:text-3xl">마이페이지</h1>
 
         {/* Profile Section */}
         <div className={cn(sectionBox, "mb-6 p-5 sm:p-7 lg:p-8")}>
@@ -114,18 +114,18 @@ export default function MyPage() {
               <BsPersonFill />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white sm:text-xl">회원정보</h2>
-              <p className="text-sm text-[#df7ca5]/70">개인 정보를 확인하고 수정할 수 있습니다.</p>
+              <h2 className="text-lg font-bold text-[#2c2416] sm:text-xl">회원정보</h2>
+              <p className="text-sm text-[#8a7344]">개인 정보를 확인하고 수정할 수 있습니다.</p>
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">아이디</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">아이디</label>
               <input type="text" value={user?.userName || ""} readOnly className={readonlyClass} />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">닉네임</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">닉네임</label>
               <input
                 type="text"
                 value={nickName}
@@ -135,11 +135,11 @@ export default function MyPage() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">아이디</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">아이디</label>
               <input type="text" value={user?.userName || "-"} readOnly className={readonlyClass} />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">가입일</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">가입일</label>
               <input
                 type="text"
                 value="-"
@@ -157,14 +157,14 @@ export default function MyPage() {
               <BsBank2 />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white sm:text-xl">계좌정보</h2>
-              <p className="text-sm text-[#df7ca5]/70">출금에 사용되는 계좌 정보입니다.</p>
+              <h2 className="text-lg font-bold text-[#2c2416] sm:text-xl">계좌정보</h2>
+              <p className="text-sm text-[#8a7344]">출금에 사용되는 계좌 정보입니다.</p>
             </div>
           </div>
 
           <div className="grid gap-4 sm:grid-cols-2">
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">은행명</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">은행명</label>
               <input
                 type="text"
                 value={bankName}
@@ -174,7 +174,7 @@ export default function MyPage() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">예금주</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">예금주</label>
               <input
                 type="text"
                 value={bankHolder}
@@ -184,7 +184,7 @@ export default function MyPage() {
               />
             </div>
             <div className="sm:col-span-2">
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">계좌번호</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">계좌번호</label>
               <input
                 type="text"
                 value={bankNo}
@@ -208,14 +208,14 @@ export default function MyPage() {
               <BsShieldLockFill />
             </div>
             <div>
-              <h2 className="text-lg font-bold text-white sm:text-xl">비밀번호 변경</h2>
-              <p className="text-sm text-[#df7ca5]/70">비밀번호를 변경할 수 있습니다.</p>
+              <h2 className="text-lg font-bold text-[#2c2416] sm:text-xl">비밀번호 변경</h2>
+              <p className="text-sm text-[#8a7344]">비밀번호를 변경할 수 있습니다.</p>
             </div>
           </div>
 
           <div className="grid gap-4">
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">현재 비밀번호</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">현재 비밀번호</label>
               <input
                 type="password"
                 value={currentPassword}
@@ -225,7 +225,7 @@ export default function MyPage() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">새 비밀번호</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">새 비밀번호</label>
               <input
                 type="password"
                 value={newPassword}
@@ -235,7 +235,7 @@ export default function MyPage() {
               />
             </div>
             <div>
-              <label className="mb-1.5 block text-sm font-semibold text-[#df7ca5]">새 비밀번호 확인</label>
+              <label className="mb-1.5 block text-sm font-semibold text-[#8a7344]">새 비밀번호 확인</label>
               <input
                 type="password"
                 value={confirmPassword}

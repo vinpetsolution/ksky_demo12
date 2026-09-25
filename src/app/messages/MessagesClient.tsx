@@ -21,9 +21,9 @@ const columns: Column<MessageThreadSummary>[] = [
     key: "subject",
     label: "제목",
     align: "left",
-    headerClassName: "pl-3 text-left text-[#df7ca5] sm:pl-6",
+    headerClassName: "pl-3 text-left text-[#8a7344] sm:pl-6",
     render: (row) => (
-      <span className="block max-w-full truncate pl-2 text-left text-sm text-white sm:pl-4">
+      <span className="block max-w-full truncate pl-2 text-left text-sm text-[#2c2416] sm:pl-4">
         {row.subject || "(제목 없음)"}
       </span>
     ),
@@ -33,26 +33,26 @@ const columns: Column<MessageThreadSummary>[] = [
     label: "보낸사람",
     align: "center",
     width: 120,
-    headerClassName: "text-[#df7ca5]",
-    render: () => <span className="text-xs text-white/90 sm:text-sm">운영팀</span>,
+    headerClassName: "text-[#8a7344]",
+    render: () => <span className="text-xs text-[#2c2416]/90 sm:text-sm">운영팀</span>,
   },
   {
     key: "date",
     label: "날짜",
     align: "center",
     width: 130,
-    headerClassName: "text-[#df7ca5]",
-    render: () => <span className="text-xs text-white/80 sm:text-sm">—</span>,
+    headerClassName: "text-[#8a7344]",
+    render: () => <span className="text-xs text-[#2c2416]/80 sm:text-sm">—</span>,
   },
   {
     key: "status",
     label: "상태",
     align: "center",
     width: 100,
-    headerClassName: "pr-3 text-[#df7ca5] sm:pr-6",
+    headerClassName: "pr-3 text-[#8a7344] sm:pr-6",
     render: () => (
       <span className="inline-flex justify-center pr-2 sm:pr-4">
-        <span className="rounded-full bg-[rgba(0,0,0,0.35)] px-3 py-1 text-xs font-bold text-white/70">
+        <span className="rounded-full bg-[#f7f1e6] px-3 py-1 text-xs font-bold text-[#8a7344]">
           읽음
         </span>
       </span>
@@ -65,13 +65,13 @@ export default function MessagesClient() {
     <AuthGuard>
       <div className="mx-auto w-full min-w-0 max-w-350 px-3 py-8 sm:px-4 sm:py-10 lg:py-14">
         <header className="mb-6 w-full sm:mb-8">
-          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#df7ca5] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
+          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#8a7344] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
             PRIVATE MESSAGE
           </p>
-          <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-white sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
+          <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-[#2c2416] sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
             쪽지함
           </h1>
-          <p className="text-sm leading-[1.75] text-[#df7ca5]">
+          <p className="text-sm leading-[1.75] text-[#8a7344]">
             운영팀 및 고객센터로부터 전달된 다양한 알림과 메시지를 확인할 수
             있습니다.
           </p>

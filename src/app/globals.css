@@ -1,15 +1,15 @@
 @import "tailwindcss";
 
 :root {
-  --background: #090406;
-  --foreground: #AEAEAE;
+  --background: #fbf6ee;
+  --foreground: #2c2416;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-pretendard);
-  --color-gray: #cccccc;
+  --color-gray: #8a7344;
 }
 
 html,
@@ -19,25 +19,14 @@ body {
 
 body {
   min-height: 100vh;
-  background-color: #090406;
+  background-color: #fbf6ee;
   background-image:
     radial-gradient(
       circle at top,
-      rgba(255, 120, 180, 0.08) 0%,
-      transparent 28%
+      rgba(230, 197, 106, 0.16) 0%,
+      transparent 32%
     ),
-    radial-gradient(
-      circle at bottom right,
-      rgba(184, 46, 102, 0.1) 0%,
-      transparent 30%
-    ),
-    linear-gradient(
-      180deg,
-      #2a0f18 0%,
-      #1d0b12 35%,
-      #13070c 70%,
-      #090406 100%
-    );
+    linear-gradient(180deg, #fffcf7 0%, #fbf6ee 42%, #f7f1e6 100%);
   background-attachment: fixed;
   color: var(--foreground);
   font-family: var(--font-pretendard), sans-serif;
@@ -55,38 +44,28 @@ body {
 @keyframes glow-pulse {
   0%, 100% {
     text-shadow:
-      0 0 5px #fff,
-      0 0 10px #ff78b4,
-      0 0 15px #c03a6f,
-      0 0 5px #b82e66,
-      0 0 5px #b82e66,
-      0 0 10px #f92552,
-      0 0 20px #c03a6f,
-      0 0 40px #8f214b;
+      0 0 4px #fff,
+      0 0 10px rgba(230, 197, 106, 0.55),
+      0 0 18px rgba(201, 162, 74, 0.35);
   }
   50% {
     text-shadow:
-      0 0 3px #fff,
-      0 0 7px #ff78b4,
-      0 0 10px #c03a6f,
-      0 0 3px #b82e66,
-      0 0 3px #b82e66,
-      0 0 7px #f92552,
-      0 0 15px #c03a6f,
-      0 0 30px #8f214b;
+      0 0 2px #fff,
+      0 0 6px rgba(230, 197, 106, 0.35),
+      0 0 12px rgba(201, 162, 74, 0.22);
   }
 }
 
 .dot-glow {
-  background: #ffc967;
-  box-shadow: 0 0 20px 5px #ffc967;
+  background: #e6c56a;
+  box-shadow: 0 0 16px 4px rgba(230, 197, 106, 0.55);
 }
 
-/* Button darkGlow – hover glow */
+/* Button darkGlow – hover gold */
 .btn-darkBlueGlow:hover {
-  background: #3a1525;
-  color: #ffffff;
-  text-shadow: 0 0 5px #ffb4d2, 0 0 10px #df7ca5, 0 0 20px #c03a6f;
+  background: #e6c56a;
+  color: #2c2416;
+  text-shadow: 0 0 8px rgba(230, 197, 106, 0.45);
 }
 
 /* Glow – dùng @utility để hỗ trợ hover:text-glow, group-hover:text-glow, v.v. */
@@ -96,69 +75,60 @@ body {
   }
 
   .text-glow {
-    color: #cccccc;
+    color: #2c2416;
   }
 
   .text-glow:hover {
-    color: #ffe7f0;
+    color: #9a7828;
     transition: all 300ms;
     text-shadow:
-      0 0 5px #fff,
-      0 0 10px #ff78b4,
-      0 0 15px #c03a6f,
-      0 0 5px #b82e66,
-      0 0 5px #b82e66,
-      0 0 10px #f92552,
-      0 0 20px #c03a6f,
-      0 0 40px #8f214b;
+      0 0 6px rgba(255, 252, 247, 0.9),
+      0 0 12px rgba(230, 197, 106, 0.45);
   }
 }
 
-/* GameSlotCard footer – diagonal stripe + text glow on hover */
+/* GameSlotCard footer */
 .game-slot-card-footer {
-  background: #1a0b12;
+  background: #fffcf7;
   transition: all 300ms;
 }
 .group:hover .game-slot-card-footer {
   background:
     linear-gradient(
       45deg,
-      rgba(255, 255, 255, 0.02) 25%,
+      rgba(201, 162, 74, 0.08) 25%,
       transparent 25%,
       transparent 50%,
-      rgba(255, 255, 255, 0.02) 50%,
-      rgba(255, 255, 255, 0.02) 75%,
+      rgba(201, 162, 74, 0.08) 50%,
+      rgba(201, 162, 74, 0.08) 75%,
       transparent 75%,
       transparent
     ),
-    #1a0b12;
+    #fffcf7;
   background-size: 0.5rem 0.5rem;
 }
 .game-slot-card-title {
-  color: #ffffff;
+  color: #2c2416;
   transition: all 300ms;
 }
 .group:hover .game-slot-card-title {
   text-shadow:
-    0 0 5px #c03a6f,
-    0 0 10px #df7ca5,
-    0 0 20px rgb(255, 170, 210);
+    0 0 6px rgba(230, 197, 106, 0.45),
+    0 0 12px rgba(201, 162, 74, 0.28);
 }
 
-/* Casino text – gradient gold */
+/* Casino text – gradient champagne gold */
 .casino_text {
   color: transparent;
   text-align: center;
   letter-spacing: -2px;
   background-image: linear-gradient(
     to bottom left,
-    #462523 0,
-    #cb9b51 22%,
-    #f6e27a 45%,
-    #f6f2c0 50%,
-    #f6e27a 55%,
-    #cb9b51 78%,
-    #462523 100%
+    #8a6e32 0,
+    #e6c56a 28%,
+    #f6e7b2 50%,
+    #c9a24a 78%,
+    #8a6e32 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
@@ -169,10 +139,10 @@ body {
   display: block;
 }
 
-/* Thin scrollbar – cho form đăng ký */
+/* Thin scrollbar */
 .scrollbar-thin {
   scrollbar-width: thin;
-  scrollbar-color: #30363d transparent;
+  scrollbar-color: #e0d0a8 transparent;
 }
 .scrollbar-thin::-webkit-scrollbar {
   width: 4px;
@@ -181,11 +151,11 @@ body {
   background: transparent;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb {
-  background: #30363d;
+  background: #e0d0a8;
   border-radius: 4px;
 }
 .scrollbar-thin::-webkit-scrollbar-thumb:hover {
-  background: #484f58;
+  background: #c9a24a;
 }
 
 /* Ẩn scrollbar — carousel banner mobile */

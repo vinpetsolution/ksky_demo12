@@ -7,7 +7,7 @@ import { useRouter } from "next/navigation";
 import { cn } from "@/utils/classNames";
 
 const INQUIRY_TABLE_HEAD_CLASS = cn(
-  "bg-[linear-gradient(135deg,rgba(72,20,40,0.98)_0%,rgba(40,12,24,0.98)_45%,rgba(18,6,12,0.99)_100%)]",
+  "bg-[#f7f1e6]",
 );
 
 interface InquiryRow {
@@ -64,13 +64,13 @@ const InquiriesPage = () => {
     <AuthGuard>
       <div className="mx-auto w-full min-w-0 max-w-350 px-3 py-8 sm:px-4 sm:py-10 lg:py-14">
         <header className="mb-6 w-full sm:mb-8">
-          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#df7ca5] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
+          <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#8a7344] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
             24 HOURS SUPPORT
           </p>
-          <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-white sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
+          <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-[#2c2416] sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
             고객센터
           </h1>
-          <p className="text-sm leading-[1.75] text-[#df7ca5]">
+          <p className="text-sm leading-[1.75] text-[#8a7344]">
             KSKY SOLUTION 고객센터는 24시간 빠르고 안전한 상담 서비스를 제공합니다.
           </p>
         </header>

@@ -10,18 +10,18 @@ const AnnouncementDetailPage = () => {
         <AuthGuard>
             <div className="mx-auto w-full min-w-0 max-w-350 px-3 py-8 sm:px-4 sm:py-10 lg:py-14">
                 <header className="mb-8 w-full sm:mb-10 lg:mb-12">
-                    <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#df7ca5] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
+                    <p className="mb-2 text-[10px] font-extrabold uppercase tracking-[3px] text-[#8a7344] sm:mb-2.5 sm:text-xs sm:tracking-[4px]">
                         CUSTOMER NOTICE
                     </p>
-                    <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-white sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
+                    <h1 className="mb-2 text-3xl font-black tracking-[-1px] text-[#2c2416] sm:mb-3 sm:text-4xl sm:tracking-[-1.5px] lg:text-[48px] lg:tracking-[-2px]">
                         공지사항
                     </h1>
-                    <p className="text-sm leading-[1.75] text-[#df7ca5]">
+                    <p className="text-sm leading-[1.75] text-[#8a7344]">
                         최신 공지사항 및 이벤트 소식을 빠르게 확인하실 수 있습니다.
                     </p>
                 </header>
 
-                <p className="py-12 text-center text-sm text-white/70">
+                <p className="py-12 text-center text-sm text-[#2c2416]/70">
                     공지를 찾을 수 없습니다.
                 </p>
 
@@ -31,7 +31,7 @@ const AnnouncementDetailPage = () => {
                             type="button"
                             variant="transparent"
                             className={cn(
-                                "h-8 rounded-sm px-2 text-sm bg-[#0d6efd] text-white hover:text-white hover:bg-[#0b5ed7]",
+                                "h-8 rounded-sm px-2 text-sm bg-[#c9a24a] text-[#2c2416] hover:text-[#2c2416] hover:bg-[#9a7828]",
                             )}
                         >
                             목록

@@ -29,14 +29,14 @@ export function NavBar() {
                 href={item.href}
                 requireAuth={item.requireAuth}
                 className={cn(
-                  "inline-flex items-center gap-2 whitespace-nowrap font-semibold text-[#d7f7ff] transition-[color,text-shadow] duration-350 hover:text-[#df7ca5]",
+                  "inline-flex items-center gap-2 whitespace-nowrap font-semibold text-[#2c2416] transition-[color,text-shadow] duration-350 hover:text-[#9a7828]",
                   "text-base xl:gap-2 2xl:gap-2.5 2xl:text-lg",
                   active &&
-                  "text-white [text-shadow:0_0_10px_rgba(255,176,201,0.45)]",
+                  "text-[#9a7828] [text-shadow:0_0_10px_rgba(230,197,106,0.45)]",
                 )}
               >
                 <Icon
-                  className={cn("text-[#df7ca5] size-[18px] shrink-0")}
+                  className={cn("text-[#c9a24a] size-[18px] shrink-0")}
                   aria-hidden
                 />
                 <span>{label}</span>

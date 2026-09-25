@@ -19,13 +19,13 @@ interface LoginModalProps {
 }
 
 const loginInputClassName = cn(
-  "h-[64px] w-full appearance-none rounded-[18px] border border-[rgba(255,170,210,0.10)] outline-none",
-  "bg-[linear-gradient(135deg,rgba(68,18,38,0.98)_0%,rgba(40,10,22,0.98)_45%,rgba(18,5,10,0.99)_100%)]",
-  "py-0 pl-[58px] pr-5 text-[15px] text-[#fff4f7] placeholder:text-[#df7ca5]/45",
-  "shadow-[inset_0_1px_0_rgba(255,255,255,0.03),0_0_18px_rgba(184,46,102,0.06)]",
+  "h-[64px] w-full appearance-none rounded-[18px] border border-[#e8dcc4] outline-none",
+  "bg-[#fffcf7]",
+  "py-0 pl-[58px] pr-5 text-[15px] text-[#2c2416] placeholder:text-[#8a7344]/70",
+  "shadow-none",
   "transition-[border-color,box-shadow,transform] duration-350 ease-out",
-  "focus:border-[rgba(255,170,210,0.22)]",
-  "focus:shadow-[inset_0_1px_0_rgba(255,255,255,0.05),0_0_22px_rgba(184,46,102,0.12)]",
+  "focus:border-[#d4b15a]",
+  "focus:shadow-[0_0_0_3px_rgba(201,162,74,0.18)]",
 );
 
 export function LoginModal({ isOpen, onClose }: LoginModalProps) {
@@ -82,16 +82,16 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
     >
       <>
         <div className="mb-8">
-          <p className="text-xs mb-3.5 spacing-4 font-extrabold uppercase tracking-[0.2em] text-[#df7ca5]">
+          <p className="text-xs mb-3.5 spacing-4 font-extrabold uppercase tracking-[0.2em] text-[#8a7344]">
             MEMBER LOGIN
           </p>
           <h2
             id="login-modal-title"
-            className="mb-4 text-4xl font-extrabold leading-tight text-white"
+            className="mb-4 text-4xl font-extrabold leading-tight text-[#2c2416]"
           >
             로그인
           </h2>
-          <p className="text-[15px] text-[#df7ca5] leading-[1.8]">
+          <p className="text-[15px] text-[#8a7344] leading-[1.8]">
             KSKY SOLUTION 플랫폼에 로그인하세요.
           </p>
         </div>
@@ -104,13 +104,13 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <div className="flex flex-col gap-3">
             <label
               htmlFor="login-id"
-              className="text-sm font-bold text-[#dffcff]"
+              className="text-sm font-bold text-[#2c2416]"
             >
               아이디
             </label>
             <div className="relative">
               <BsPersonFill
-                className="pointer-events-none absolute left-5 top-1/2 size-4.5 -translate-y-1/2 text-[#df7ca5]"
+                className="pointer-events-none absolute left-5 top-1/2 size-4.5 -translate-y-1/2 text-[#8a7344]"
                 aria-hidden
               />
               <input
@@ -129,13 +129,13 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
           <div className="flex flex-col gap-2">
             <label
               htmlFor="login-password"
-              className="text-[15px] font-bold text-white"
+              className="text-[15px] font-bold text-[#2c2416]"
             >
               비밀번호
             </label>
             <div className="relative">
               <BsLockFill
-                className="pointer-events-none absolute left-5 top-1/2 size-4.5 -translate-y-1/2 text-[#df7ca5]"
+                className="pointer-events-none absolute left-5 top-1/2 size-4.5 -translate-y-1/2 text-[#8a7344]"
                 aria-hidden
               />
               <input
@@ -160,7 +160,7 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
             contentClassName="relative z-[2]"
             className={cn(
               "relative overflow-hidden h-18 rounded-3xl text-base font-extrabold transition-all duration-300",
-              "hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(0,0,0,.44),0_0_32px_rgba(184,46,102,.18),0_0_20px_rgba(255,120,180,.12)]",
+              "hover:-translate-y-1 hover:shadow-[0_18px_42px_rgba(184,146,58,0.22)]",
             )}
           >
             {isLoading ? "로그인 중...." : "로그인"}
@@ -168,11 +168,11 @@ export function LoginModal({ isOpen, onClose }: LoginModalProps) {
         </form>
 
         {/* {onOpenSignUp ? (
-          <p className="mt-6 text-center text-sm text-[#df7ca5]/80">
+          <p className="mt-6 text-center text-sm text-[#8a7344]">
             아직 회원이 아니신가요?{" "}
             <button
               type="button"
-              className="font-bold text-[#ffdbe8] underline-offset-2 transition-colors hover:text-white hover:underline"
+              className="font-bold text-[#c9a24a] underline-offset-2 transition-colors hover:text-[#9a7828] hover:underline"
               onClick={() => {
                 onClose();
                 onOpenSignUp();

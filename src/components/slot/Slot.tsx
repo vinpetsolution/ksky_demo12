@@ -9,7 +9,7 @@ import { DEMO_SLOT_VENDORS } from '@/mocks/gameVendors';
 const SHINE_DURATION = 4.5;
 const SHINE_X = ["-171%", "229%"] as const;
 const SHINE_GRADIENT =
-  "linear-gradient(90deg, transparent, rgb(255 255 255 / 0.05), rgb(255 120 180 / 0.22), rgb(255 255 255 / 0.05), transparent)";
+  "linear-gradient(90deg, transparent, rgb(255 252 247 / 0.2), rgb(230 197 106 / 0.45), rgb(255 252 247 / 0.2), transparent)";
 
 function CardShine() {
   return (
@@ -50,7 +50,7 @@ export default function Slot() {
             placeholder="게임 검색..."
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
-            className="w-full rounded-lg border border-[#5a2035] bg-[#1f0d14] px-4 py-3 pr-10 text-white shadow-sm transition-colors focus:border-[#c03a6f] focus:outline-none focus:ring-2 focus:ring-[#c03a6f]"
+            className="w-full rounded-lg border border-[#e0d0a8] bg-white px-4 py-3 pr-10 text-[#2c2416] shadow-sm transition-colors focus:border-[#c9a24a] focus:outline-none focus:ring-2 focus:ring-[#c9a24a]"
           />
         </div>
       </div>
@@ -63,11 +63,11 @@ export default function Slot() {
           return (
             <div
               key={vendor.name}
-              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#5a2035] transition-colors hover:border-[#c03a6f]"
+              className="group relative cursor-pointer overflow-hidden rounded-2xl border border-[#e0d0a8] transition-colors hover:border-[#c9a24a]"
               onClick={handleVendorClick}
             >
               <CardShine />
-              <div className="relative h-30 bg-[#120810]">
+              <div className="relative h-30 bg-[#f7f1e6]">
                 <div className="absolute right-0 -bottom-0.5 h-30.5 transition-all duration-300 group-hover:scale-110">
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
@@ -86,9 +86,9 @@ export default function Slot() {
                   />
                 </div>
               </div>
-              <div className="h-12 bg-[#1a0b12] transition-all duration-300 group-hover:bg-linear-to-r group-hover:from-[#1a0b12] group-hover:to-[#3a1525]">
+              <div className="h-12 bg-[#fffcf7] transition-all duration-300 group-hover:bg-linear-to-r group-hover:from-[#fffcf7] group-hover:to-[#f7f1e6]">
                 <div className="flex h-full items-center px-4 md:px-7.5">
-                  <span className="truncate text-[13px] font-semibold text-[#c8c8c8] transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_5px_#c03a6f] md:text-[17px]">
+                  <span className="truncate text-[13px] font-semibold text-[#2c2416] transition-all duration-300 group-hover:text-[#9a7828] group-hover:drop-shadow-[0_0_5px_rgba(201,162,74,0.45)] md:text-[17px]">
                     {vendor.name}
                   </span>
                 </div>
@@ -100,8 +100,8 @@ export default function Slot() {
 
       {searchQuery && filteredVendors.length === 0 && (
         <div className="py-20 text-center">
-          <h3 className="mt-4 text-lg font-medium text-white">검색 결과가 없습니다</h3>
-          <p className="mt-2 text-gray-400">다른 검색어를 시도해 보세요.</p>
+          <h3 className="mt-4 text-lg font-medium text-[#2c2416]">검색 결과가 없습니다</h3>
+          <p className="mt-2 text-[#8a7344]">다른 검색어를 시도해 보세요.</p>
         </div>
       )}
     </div>

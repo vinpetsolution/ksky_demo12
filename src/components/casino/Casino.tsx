@@ -8,7 +8,7 @@ import { DEMO_CASINO_VENDORS } from '@/mocks/gameVendors';
 const SHINE_DURATION = 4.5;
 const SHINE_X = ["-171%", "229%"] as const;
 const SHINE_GRADIENT =
-  "linear-gradient(90deg, transparent, rgb(255 255 255 / 0.05), rgb(255 120 180 / 0.22), rgb(255 255 255 / 0.05), transparent)";
+  "linear-gradient(90deg, transparent, rgb(255 252 247 / 0.2), rgb(230 197 106 / 0.45), rgb(255 252 247 / 0.2), transparent)";
 
 function CardShine() {
   return (
@@ -47,7 +47,7 @@ export default function Casino() {
             className="group relative w-full cursor-pointer transition-all duration-300"
             onClick={handleVendorClick}
           >
-            <div className="relative aspect-400/170 w-full overflow-hidden rounded-2xl border border-[#5a2035] bg-linear-to-r from-[#0d0608] to-[#2a0f18] transition-colors duration-200 hover:border-[#c03a6f]">
+            <div className="relative aspect-400/170 w-full overflow-hidden rounded-2xl border border-[#e0d0a8] bg-linear-to-r from-[#fffcf7] to-[#f7f1e6] transition-colors duration-200 hover:border-[#c9a24a]">
               <CardShine />
               <div className="absolute right-0 bottom-0 z-10 h-full w-[55%] transition-transform duration-300 group-hover:scale-105">
                 <Image

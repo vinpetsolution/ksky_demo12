@@ -40,9 +40,9 @@ export function GameSlotCard({
   const content = (
     <div
       className={cn(
-        "group relative flex flex-col overflow-hidden bg-[#0d0608]",
-        "border border-[#5a2035] transition-colors duration-200",
-        href && "hover:border-[#c03a6f]",
+        "group relative flex flex-col overflow-hidden bg-[#fffcf7]",
+        "border border-[#e0d0a8] transition-colors duration-200",
+        href && "hover:border-[#c9a24a]",
         className
       )}
     >
@@ -103,7 +103,7 @@ export function GameSlotCard({
       {/* Footer */}
       <div
         className={cn(
-          "game-slot-card-footer relative flex min-h-10 shrink-0 items-center border-t border-[#3a1525] px-[4%] py-2"
+          "game-slot-card-footer relative flex min-h-10 shrink-0 items-center border-t border-[#e8dcc4] px-[4%] py-2"
         )}
       >
         <span className="game-slot-card-title text-[clamp(0.75rem,2.5vw,1rem)] font-semibold">

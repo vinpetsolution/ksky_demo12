@@ -7,9 +7,9 @@ export default function NotFoundPage() {
   const router = useRouter();
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-center bg-[#070a0f] px-6">
+    <div className="flex min-h-screen flex-col items-center justify-center bg-[#fbf6ee] px-6">
       <div className="flex flex-col items-center gap-6 text-center">
-        <span className="text-8xl font-bold text-[#c03a6f]/20">404</span>
+        <span className="text-8xl font-bold text-[#c9a24a]/35">404</span>
         <h1 className="text-2xl font-bold text-gray md:text-3xl">
           페이지를 찾을 수 없습니다
         </h1>

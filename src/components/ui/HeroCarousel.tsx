@@ -67,14 +67,14 @@ export default function HeroCarousel({
       <div
         className={cn(
           "relative w-full overflow-hidden rounded-2xl lg:rounded-[36px]",
-          "border border-[rgba(255,170,210,0.12)]",
-          "bg-[linear-gradient(135deg,rgba(52,16,30,0.96)_0%,rgba(30,10,18,0.98)_42%,rgba(14,5,9,0.99)_100%)]",
-          "shadow-[0_0_50px_rgb(0_0_0/0.34),0_0_30px_rgb(184_46_102/0.08),inset_0_1px_0_rgb(255_255_255/0.03)]",
+          "border border-[#e8dcc4]",
+          "bg-white",
+          "shadow-[0_16px_40px_rgba(184,146,58,0.12)]",
           "backdrop-blur-md",
           "h-[450px] md:h-[550px] lg:h-[650px]",
           "after:pointer-events-none after:absolute after:bottom-0 after:left-0 after:z-30 after:h-0.5 after:w-full after:content-['']",
-          "after:bg-[linear-gradient(90deg,transparent,rgba(255,180,210,0.65),rgba(184,46,102,0.85),rgba(255,180,210,0.65),transparent)]",
-          "after:shadow-[0_0_14px_rgba(255,120,180,0.16)]",
+          "after:bg-[linear-gradient(90deg,transparent,#e6c56a,#d4b15a,#e6c56a,transparent)]",
+          "after:shadow-[0_0_14px_rgba(212,177,90,0.28)]",
         )}
       >
         {slides.map((slide, i) => {
@@ -105,8 +105,8 @@ export default function HeroCarousel({
               <div
                 className={cn(
                   "absolute inset-0",
-                  "bg-linear-to-b from-[#2a0f18]/90 via-[#2a0f18]/50 to-transparent",
-                  "lg:bg-linear-to-r lg:from-[#2a0f18]/95 lg:via-[#2a0f18]/40 lg:to-[#2a0f18]/80",
+                  "bg-linear-to-b from-[#fbf6ee]/88 via-[#fbf6ee]/35 to-transparent",
+                  "lg:bg-linear-to-r lg:from-[#fbf6ee]/92 lg:via-[#fbf6ee]/40 lg:to-transparent",
                 )}
               />
 
@@ -125,7 +125,7 @@ export default function HeroCarousel({
                 >
                   <motion.p
                     className={cn(
-                      "mb-0 text-center text-sm font-extrabold uppercase tracking-[3px] text-[#df7ca5]",
+                      "mb-0 text-center text-sm font-extrabold uppercase tracking-[3px] text-[#8a7344]",
                       "sm:text-base md:text-lg lg:mb-[22px] lg:text-left lg:tracking-[4px]",
                     )}
                     initial={false}
@@ -140,7 +140,7 @@ export default function HeroCarousel({
                   </motion.p>
                   <motion.h2
                     className={cn(
-                      "mb-[28px] hidden whitespace-pre-line uppercase font-black leading-[1.05] tracking-[-3px] text-white lg:block",
+                      "mb-[28px] hidden whitespace-pre-line uppercase font-black leading-[1.05] tracking-[-3px] text-[#2c2416] lg:block",
                       "text-2xl sm:text-3xl lg:text-5xl xl:text-[76px]",
                     )}
                     initial={false}
@@ -155,7 +155,7 @@ export default function HeroCarousel({
                   </motion.h2>
                   <motion.p
                     className={cn(
-                      "hidden max-w-[560px] text-sm leading-relaxed text-[#a6c7d4] lg:block",
+                      "hidden max-w-[560px] text-sm leading-relaxed text-[#8a7344] lg:block",
                       "xl:text-[18px] xl:leading-loose",
                     )}
                     initial={false}
@@ -218,8 +218,8 @@ export default function HeroCarousel({
                 className={cn(
                   "cursor-pointer rounded-full transition-all duration-300",
                   i === active
-                    ? "size-3 bg-[#5bffdf] shadow-[0_0_14px_rgb(91_255_223/0.45)] xl:size-3.5"
-                    : "size-2 bg-[#ffaad240] hover:bg-[#ffaad260] xl:size-2.5",
+                    ? "size-3 bg-[#c9a24a] shadow-[0_0_14px_rgba(201,162,74,0.45)] xl:size-3.5"
+                    : "size-2 bg-[#e0d0a8] hover:bg-[#c9a24a] xl:size-2.5",
                 )}
                 aria-label={`Slide ${i + 1}`}
                 aria-current={i === active ? "true" : undefined}

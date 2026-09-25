@@ -30,13 +30,13 @@ function statusLabel(status: string): { text: string; className: string } {
     return { text: "답변완료", className: "text-sm text-green-400" };
   }
   if (s === "closed") {
-    return { text: "종료", className: "text-sm text-gray-400" };
+    return { text: "종료", className: "text-sm text-[#8a7344]" };
   }
   return { text: "답변대기", className: "text-sm text-yellow-400" };
 }
 
 const contentBoxClassName = cn(
-  "rounded-xl bg-white px-4 py-3 text-sm leading-relaxed text-[#04151d]",
+  "rounded-xl bg-white px-4 py-3 text-sm leading-relaxed text-[#2c2416]",
   "whitespace-pre-wrap",
 );
 
@@ -63,11 +63,11 @@ export function QnADetailModal({ isOpen, qna, onClose }: QnADetailModalProps) {
     >
       {qna && status ? (
         <>
-          <h2 className="mb-4 pr-10 text-lg font-black text-white sm:text-xl">
+          <h2 className="mb-4 pr-10 text-lg font-black text-[#2c2416] sm:text-xl">
             {qna.title}
           </h2>
 
-          <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-[#df7ca5]">
+          <div className="mb-4 flex flex-wrap items-center gap-x-3 gap-y-1 text-sm text-[#8a7344]">
             <span className={status.className}>{status.text}</span>
             <span>신청시간: {formatKoDateTime(qna.createdAt)}</span>
             <span>글쓴이: {qna.userName || "-"}</span>
@@ -81,16 +81,16 @@ export function QnADetailModal({ isOpen, qna, onClose }: QnADetailModalProps) {
 
           <div className="space-y-4">
             <div>
-              <p className="mb-2 text-sm font-bold text-[#df7ca5]">내용</p>
+              <p className="mb-2 text-sm font-bold text-[#8a7344]">내용</p>
               <div className={contentBoxClassName}>{qna.message}</div>
             </div>
 
             <div>
-              <p className="mb-2 text-sm font-bold text-[#df7ca5]">답변</p>
+              <p className="mb-2 text-sm font-bold text-[#8a7344]">답변</p>
               {qna.answer ? (
                 <div className={contentBoxClassName}>{qna.answer}</div>
               ) : (
-                <p className="text-sm text-white/60">
+                <p className="text-sm text-[#2c2416]/60">
                   아직 답변이 등록되지 않았습니다.
                 </p>
               )}
